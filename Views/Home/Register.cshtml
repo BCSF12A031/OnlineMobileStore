@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <title>Online Mobile Store</title>
+    <link href="~/Contents/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="keywords" content="Online Mobile Store" />
+    <link href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+    <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/Contents/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/Contents/css/style3.css" />
+    <link rel="stylesheet" type="text/css" href="~/Contents/css/animate-custom.css" />
+</head>
+<body>
+    <div class="wrap">
+        <!----start-Header---->
+        <div class="header">
+            <div class="search-bar">
+                <form>
+                    <input type="text"><input type="submit" value="Search" />
+                </form>
+            </div>
+            <div class="clear"> </div>
+            <div class="header-top-nav">
+                <ul>
+                    <li><a href="/Home/Register">Register</a></li>
+                    <li><a href="/Home/Register">Login</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#"><span>shopping cart&nbsp;&nbsp;: </span></a><label> &nbsp;noitems</label></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="clear"> </div>
+    <div class="top-header">
+        <div class="wrap">
+            <!----start-logo---->
+            <div class="logo">
+                <a href="/Home/Index"><img src="~/Images/logo.png" title="logo" /></a>
+            </div>
+            <!----end-logo---->
+            <!----start-top-nav---->
+            <div class="top-nav">
+                <ul>
+                    <li><a href="/Home/Index">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Store">Store</a></li>
+                    <li><a href="/Home/Store">Featured</a></li>
+                    <li><a href="/Home/Blog">Blog</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Login and Registration</h1>
+        </header>
+        <section>
+            <div id="container_demo">
+                <a class="hiddenanchor" id="toregister"></a>
+                <a class="hiddenanchor" id="tologin"></a>
+                <div id="wrapper">
+                    <div id="login" class="animate form">
+                        <form action="mysuperscript.php" autocomplete="on">
+                            <h1>Log in</h1>
+                            <p>
+                                <label for="username" class="uname" data-icon="u"> Your email or username </label>
+                                <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com" />
+                            </p>
+                            <p>
+                                <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                            </p>
+                            <p class="keeplogin">
+                                <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                                <label for="loginkeeping">Keep me logged in</label>
+                            </p>
+                            <p class="login button">
+                                <input type="submit" value="Login" />
+                            </p>
+                            <p class="change_link">
+                                Not a member yet ?
+                                <a href="#toregister" class="to_register">Join us</a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <div id="register" class="animate form">
+                        <form action="mysuperscript.php" autocomplete="on">
+                            <h1> Sign up </h1>
+                            <p>
+                                <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                            </p>
+                            <p>
+                                <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+                                <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />
+                            </p>
+                            <p class="signin button">
+                                <input type="submit" value="Sign up" />
+                            </p>
+                            <p class="change_link">
+                                Already a member ?
+                                <a href="#tologin" class="to_register"> Go and log in </a>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="section group">
+                <div class="col_1_of_4 span_1_of_4">
+                    <h3>Our Info</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h3>Latest-News</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h3>Store Location</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h3>Order-online</h3>
+                    <p>080-1234-56789</p>
+                    <p>080-1234-56780</p>
+                </div>
+                <div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+                    <h3>News-Letter</h3>
+                    <form>
+                        <input type="text"><input type="submit" value="go" />
+                    </form>
+                    <h3>Follow Us:</h3>
+                    <ul>
+                        <li><a href="https://www.twitter.com"><img src="~/Images/twitter.png" title="twitter" />Twitter</a></li>
+                        <li><a href="https://www.facebook.com"><img src="~/Images/facebook.png" title="Facebook" />Facebook</a></li>
+                        <li><a href="#"><img src="~/Images/rss.png" title="Rss" />Rss</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"> </div>
+        <div class="wrap">
+            <div class="copy-right">
+                <p>&copy; 2016  Online Mobile Store. All Rights Reserved .>Online Mobile Store</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
