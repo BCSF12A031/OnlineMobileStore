@@ -1,73 +1,62 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@model Online_Mobile_Store.Models.Product
+@{
+    ViewBag.title = "Online Mobile Store";
+}
+
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>@ViewBag.title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/jquery-2.2.0.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <link href="~/Content/jquery.ui.autocomplete.css" rel="stylesheet" />
+    <link href="~/Content/jquery.ui.all.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.theme.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="~/Contents/stylee.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="keywords" content="Online Mobile Store" />
+    <link href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container body-content">
-        
-
-
-
-    <title>Mobilestore Website Template | Home :: W3layouts</title>
-    <link href="/Contents/style.css" rel="stylesheet" type="text/css" media="all">
-    <meta name="keywords" content="Online Mobile Store">
-    <link href="//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="~/Contents/responsiveslides.css">
-    <script src="/Scripts/jquery.min.js"></script>
-    <script src="/Scripts/responsiveslides.min.js"></script>
-    <script>
-		    // You can also use "$(window).load(function() {"
-			    $(function () {
-
-			      // Slideshow 1
-			      $("#slider1").responsiveSlides({
-			        maxwidth: 1600,
-			        speed: 600
-			      });
-			});
-    </script>
-
-
+   
     <div class="wrap">
+        
         <!----start-Header---->
         <div class="header">
             <div class="search-bar">
-                <form>
-                    <input type="text"><input type="submit" value="Search">
-                </form>
+               
+               
+                  
+                   @using (Html.BeginForm("GetSearch","Home"))
+                   {
+                    <input type="text" id="tt1">
+                    <input type="submit" value="Search" />
+                   }
+                
             </div>
+
+            <script>
+                $(document).ready(function () {
+                   
+                    $('#txt').autocomplete({
+                        
+                            source: '@Url.Action("GetSearch","Home")'
+                        });
+                });
+             
+            </script>
+
             <div class="clear"> </div>
             <div class="header-top-nav">
                 <ul>
-                    <li><a href="/Home/Store">Register</a></li>
-                    <li><a href="/Home/Store">Login</a></li>
-                    <li><a href="/Home/Store">Delivery</a></li>
-                    <li><a href="/Home/Store">Checkout</a></li>
-                    <li><a href="/Home/Store">My account</a></li>
-                    <li><a href="/Home/Store"><span>shopping cart&nbsp;&nbsp;: </span></a><label> &nbsp;noitems</label></li>
+                    <li>@Html.ActionLink("Register","Register","Users")</li>
+                    <li>@Html.ActionLink("Login", "Register", "Users")</li>
                 </ul>
             </div>
             <div class="clear"> </div>
@@ -78,187 +67,30 @@
         <div class="wrap">
             <!----start-logo---->
             <div class="logo">
-                <a href="/Home/Index"><img src="/Images/logo.png" title="logo"></a>
+                <a href="/Home/Index"><img src="~/Images/logo.png" title="logo" /></a>
             </div>
             <!----end-logo---->
             <!----start-top-nav---->
             <div class="top-nav">
                 <ul>
-                    <li><a href="/Home/Index">Home</a></li>
-                    <li><a href="/Home/About">About</a></li>
-                    <li><a href="/Home/Store">Store</a></li>
-                    <li><a href="/Home/Store">Featured</a></li>
-                    <li><a href="/Home/Blog">Blog</a></li>
-                    <li><a href="/Home/Contact">Contact</a></li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Store", "Store", "Home")</li>
+                    <li>@Html.ActionLink("Featured", "Store", "Home")</li>
+                    <li>@Html.ActionLink("Blog", "Blog", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
             <div class="clear"> </div>
         </div>
     </div>
-    <!----End-top-nav---->
-    <!----End-Header---->
-    <!--start-image-slider---->
-    <div class="wrap">
-        <div class="image-slider">
-            <!-- Slideshow 1 -->
-            <ul class="rslides" id="slider1">
-                <li><img src="/Images/1.png" alt=""></li>
-                <li><img src="/Images/2.png" alt=""></li>
-                <li><img src="/Images/1.png" alt=""></li>
-            </ul>
-            <!-- Slideshow 2 -->
-        </div>
-        <!--End-image-slider---->
-    </div>
-    <div class="clear"> </div>
-    <div class="wrap">
-        <div class="content">
-            <div class="top-3-grids">
-                <div class="section group">
-                    <div class="grid_1_of_3 images_1_of_3">
-                        <a href="/Home/Single"><img src="/Images/grid-img1.jpg"></a>
-                        <h3>BlackBerr</h3>
-                    </div>
-                    <div class="grid_1_of_3 images_1_of_3 second">
-                        <a href="/Home/Single"><img src="/Images/grid-img2.jpg"></a>
-                        <h3>Lorem Ipsum is simply dummy text </h3>
-                    </div>
-                    <div class="grid_1_of_3 images_1_of_3 theree">
-                        <a href="/Home/Single"><img src="/Images/grid-img3.jpg"></a>
-                        <h3>Lorem Ipsum is simply dummy text </h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-grids">
-                <h4>Deals of the day</h4>
-                <div class="section group">
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m1.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$260</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m2.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$150</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m7.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$130</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m4.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$460</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="section group">
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m2.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$260</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m6.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$100</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m7.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$180</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="/Images/m1.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$140</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="content-sidebar">
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="/Home/Store">Accord Mobiles</a></li>
-                    <li><a href="/Home/Store">Ace Mobile</a></li>
-                    <li><a href="/Home/Store">Acer Mobile</a></li>
-                    <li><a href="/Home/Store">Airfone</a></li>
-                    <li><a href="/Home/Store">Apple</a></li>
-                    <li><a href="/Home/Store">Blackberry</a></li>
-                    <li><a href="/Home/Store">Byond Tech</a></li>
-                    <li><a href="/Home/Store">Celkon Mobiles</a></li>
-                    <li><a href="/Home/Store">Dell Mobile Phones </a></li>
-                    <li><a href="/Home/Store">Fly Mobile</a></li>
-                    <li><a href="/Home/Store">Fujezone Mobiles </a></li>
-                    <li><a href="/Home/Store">HTC</a></li>
-                    <li><a href="/Home/Store">LG Mobiles</a></li>
-                    <li><a href="/Home/Store">Longtel Mobile</a></li>
-                    <li><a href="/Home/Store">Maxx</a></li>
-                    <li><a href="/Home/Store">Micromax Mobiles </a></li>
-                    <li><a href="/Home/Store">Samsung Mobiles</a></li>
-                    <li><a href="/Home/Store">Sony Ericsson Mobiles</a></li>
-                    <li><a href="/Home/Store">Wynncom Mobiles</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="clear"> </div>
-    </div>
+    @RenderBody()
     <div class="footer">
         <div class="wrap">
             <div class="section group">
                 <div class="col_1_of_4 span_1_of_4">
                     <h3>Our Info</h3>
-                    <p>Online Mobile Store is a online shop where you can buy your desired gadgets easily .</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <div class="col_1_of_4 span_1_of_4">
                     <h3>Latest-News</h3>
@@ -275,46 +107,31 @@
                 </div>
                 <div class="col_1_of_4 span_1_of_4 footer-lastgrid">
                     <h3>News-Letter</h3>
-                    <form>
-                        <input type="text"><input type="submit" value="go">
-                    </form>
+                    @using (Html.BeginForm())
+                    {
+
+                        <input type="text"><input type="submit" value="go" />
+                    }
                     <h3>Follow Us:</h3>
                     <ul>
-                        <li><a href="/Home/Store"><img src="/Images/twitter.png" title="twitter">Twitter</a></li>
-                        <li><a href="/Home/Store"><img src="/Images/facebook.png" title="Facebook">Facebook</a></li>
-                        <li><a href="/Home/Store"><img src="/Images/rss.png" title="Rss">Rss</a></li>
+                        <li><a href="https://www.twitter.com"><img src="~/Images/twitter.png" title="twitter" />Twitter</a></li>
+                        <li><a href="https://www.facebook.com"><img src="~/Images/facebook.png" title="Facebook" />Facebook</a></li>
+                        <li><a href="/Home/Store"><img src="~/Images/rss.png" title="Rss" />Rss</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="clear"> </div>
         <div class="wrap">
             <div class="copy-right">
-                <p>© 2016  Online Mobile Store. All Rights Reserved .>Online Mobile Store</p>
+                <p>&copy; 2016  Online Mobile Store. All Rights Reserved Online Mobile Store</p>
             </div>
         </div>
     </div>
 
-<!-- Visual Studio Browser Link -->
-<script type="application/json" id="__browserLink_initializationData">
-    {"appName":"Chrome","requestId":"3ab5490a7b974d35a27c808770b9ea0d"}
-</script>
-<script type="text/javascript" src="http://localhost:59534/14d22d56e9114d47bc0bd4f39c5499a8/browserLink" async="async"></script>
-<!-- End Browser Link -->
 
 
 
-
-
-
-        <hr>
-        <footer>
-            <p>© 2016 - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+

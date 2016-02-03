@@ -1,0 +1,116 @@
+﻿@model Online_Mobile_Store.Models.Product
+@{ 
+    Layout = "~/Views/Shared/_LayoutPageRegister.cshtml";
+}
+    <div class="clear"> </div>
+    <div class="wrap">
+        <div class="content">
+            <div class="content-grids">
+                <div class="details-page">
+                    <div class="back-links">
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")<img src="~/Images/arrow.png" alt=""></li>
+                            <li>@Html.ActionLink("Product", "Store", "Home")<img src="~/Images/arrow.png" alt=""></li>
+                            <li>@Html.ActionLink("Product-Details", "Single", "Admin")<img src="~/Images/arrow.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detalis-image">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li data-thumb="images/m11.jpg">
+                                <div class="thumb-image"> <img src="~/Images/m11.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                            </li>
+                            <li data-thumb="images/m11.jpg">
+                                <div class="thumb-image"> <img src="~/Images/m11.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                            </li>
+                            <li data-thumb="images/m11.jpg">
+                                <div class="thumb-image"> <img src="~/Images/m11.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detalis-image-details">
+                    <div class="details-categories">
+                        <ul>
+                            <li><h3>Category:</h3></li>
+                            <li class="active1"><a href="#"><span>Nokia Mobiles</span></a></li>
+                            <li>@Html.ActionLink("HTC Mobiles", "Store", "Store")</li>
+                            <li>@Html.ActionLink("Iphone Mobiles", "Store", "Store")</li>
+                            <li>@Html.ActionLink("Zen Mobiles", "Store", "Store")</li>
+                        </ul>
+                    </div><br />
+                    <div class="brand-value">
+                        <h3>Product-Complete Details With Value</h3>
+                        <div class="left-value-details">
+                            <ul>
+                                <li>Price:</li>
+                                <li><span>$350</span></li>
+                                <li><h5>$250</h5></li>
+                                <br />
+                                <li><p>Not rated</p></li>
+                            </ul>
+                        </div>
+                        <div class="right-value-details">
+                            <a href="#">Instock</a>
+                            <p>No reviews</p>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="brand-history">
+                        <h3>Description :</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#">Addcart</a>
+                    </div>
+                    <div class="share">
+                        <ul>
+                            <li> <a href="#"><img src="~/Images/facebook.png" title="facebook" /> Facebook</a></li>
+                            <li> <a href="#"><img src="~/Images/twitter.png" title="Twiiter" />Twiiter</a></li>
+                            <li> <a href="#"><img src="~/Images/rss.png" title="Rss" />Rss</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"> </div>
+
+                </div>
+                <div class="clear"> </div>
+                <div class="menu_container">
+                    <p class="menu_head">Lorem Ipsum<span class="plusminus">+</span></p>
+                    <div class="menu_body" style="display: none;">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <p class="menu_head">About Product<span class="plusminus">+</span></p>
+                    <div class="menu_body" style="display: none;">
+                        <p>theonlytutorials.com is providing a great varitey of tutorials and scripts to use it immediate on any project!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-sidebar">
+            <h4>Categories</h4>
+            <ul>
+                <li>@Html.ActionLink("Accord Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Ace Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Acer Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Airphone", "Store", "Home")</li>
+                <li>@Html.ActionLink("Apple", "Store", "Home")</li>
+                <li>@Html.ActionLink("BlackBerry", "Store", "Home")</li>
+                <li>@Html.ActionLink("Beyond Tech", "Store", "Home")</li>
+                <li>@Html.ActionLink("Celkon Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Dell Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Fly Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Fujezene Mobile", "Store", "Home")</li>
+                <li>@Html.ActionLink("HTC", "Store", "Home")</li>
+                <li>@Html.ActionLink("LG Mobiles", "Store", "Home")</li>
+                <li>@Html.ActionLink("Long Tell", "Store", "Home")</li>
+                <li>@Html.ActionLink("Maxx", "Store", "Home")</li>
+                <li>@Html.ActionLink("Micromax", "Store", "Home")</li>
+                <li>@Html.ActionLink("Samsung", "Store", "Home")</li>
+                <li>@Html.ActionLink("Sony", "Store", "Home")</li>
+                <li>@Html.ActionLink("Wynncom Mobiles", "Store", "Home")</li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"> </div>
+    </div>
+    

@@ -1,0 +1,76 @@
+﻿@model Online_Mobile_Store.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageRegister.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="container">
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Company)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Company)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p_Image)
+        </dt>
+        <dd>
+         @*<!- <img src="~/Images/"+@Model.p_Image   alt="alternative text" height="42" width="42"/>-->*@
+            <img src=" alt="alternative text" height="42" width="42" />
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Back to List", "AdminPanel")
+</p>

@@ -1,58 +1,8 @@
-﻿<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Online Mobile Store </title>
-    <link href="~/Contents/stylee.css" rel="stylesheet" type="text/css" media="all" />
-    <meta name="keywords" content="Online Mobile Store" />
-    <link href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <div class="wrap">
-        <!----start-Header---->
-        <div class="header">
-            <div class="search-bar">
-                <form>
-                    <input type="text"><input type="submit" value="Search" />
-                </form>
-            </div>
-            <div class="clear"> </div>
-            <div class="header-top-nav">
-                <ul>
-                    <li><a href="/Home/Register">Register</a></li>
-                    <li><a href="/Home/Register">Login</a></li>
-                    <li><a href="/Home/Store">Delivery</a></li>
-                    <li><a href="/Home/Store">Checkout</a></li>
-                    <li><a href="/Home/Store">My account</a></li>
-                    <li><a href="/Home/Store"><span>shopping cart&nbsp;&nbsp;: </span></a><label> &nbsp;noitems</label></li>
-                </ul>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
-    <div class="clear"> </div>
-    <div class="top-header">
-        <div class="wrap">
-            <!----start-logo---->
-            <div class="logo">
-                <a href="/Home/Index"><img src="~/Images/logo.png" title="logo" /></a>
-            </div>
-            <!----end-logo---->
-            <!----start-top-nav---->
-            <div class="top-nav">
-                <ul>
-                    <li><a href="/Home/Index">Home</a></li>
-                    <li><a href="/Home/About">About</a></li>
-                    <li><a href="/Home/Store">Store</a></li>
-                    <li><a href="/Home/Store">Featured</a></li>
-                    <li><a href="/Home/Blog">Blog</a></li>
-                    <li><a href="/Home/Contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
-    <!----End-top-nav---->
-    <!----End-Header---->
+﻿@model Online_Mobile_Store.Models.Product
+@{
+    ViewBag.title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
     <div class="clear"> </div>
     <div class="wrap">
         <div class="content">
@@ -153,73 +103,28 @@
             <div class="content-sidebar">
                 <h4>Categories</h4>
                 <ul>
-                    <li><a href="/Home/Store">Accord Mobiles</a></li>
-                    <li><a href="/Home/Store">Ace Mobile</a></li>
-                    <li><a href="/Home/Store">Acer Mobile</a></li>
-                    <li><a href="/Home/Store">Airfone</a></li>
-                    <li><a href="/Home/Store">Apple</a></li>
-                    <li><a href="/Home/Store">Blackberry</a></li>
-                    <li><a href="/Home/Store">Byond Tech</a></li>
-                    <li><a href="/Home/Store">Celkon Mobiles</a></li>
-                    <li><a href="/Home/Store">Dell Mobile Phones </a></li>
-                    <li><a href="/Home/Store">Fly Mobile</a></li>
-                    <li><a href="/Home/Store">Fujezone Mobiles </a></li>
-                    <li><a href="/Home/Store">HTC</a></li>
-                    <li><a href="/Home/Store">LG Mobiles</a></li>
-                    <li><a href="/Home/Store">Longtel Mobile</a></li>
-                    <li><a href="/Home/Store">Maxx</a></li>
-                    <li><a href="/Home/Store">Micromax Mobiles </a></li>
-                    <li><a href="/Home/Store">Samsung Mobiles</a></li>
-                    <li><a href="/Home/Store">Sony Ericsson Mobiles</a></li>
-                    <li><a href="/Home/Store">Wynncom Mobiles</a></li>
+                    <li>@Html.ActionLink("Accord Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Ace Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Acer Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Airphone", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Apple", "Store", "Store")</li>
+                    <li>@Html.ActionLink("BlackBerry", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Beyond Tech", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Celkon Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Dell Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Fly Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Fujezene Mobile", "Store", "Store")</li>
+                    <li>@Html.ActionLink("HTC", "Store", "Store")</li>
+                    <li>@Html.ActionLink("LG Mobiles", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Long Tell", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Maxx", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Micromax", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Samsung", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Sony", "Store", "Store")</li>
+                    <li>@Html.ActionLink("Wynncom Mobiles", "Store", "Store")</li>
                 </ul>
             </div>
         </div>
         <div class="clear"> </div>
     </div>
     </div>
-    <div class="footer">
-        <div class="wrap">
-            <div class="section group">
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Our Info</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Latest-News</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Store Location</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <h3>Order-online</h3>
-                    <p>080-1234-56789</p>
-                    <p>080-1234-56780</p>
-                </div>
-                <div class="col_1_of_4 span_1_of_4 footer-lastgrid">
-                    <h3>News-Letter</h3>
-                    <form>
-                        <input type="text"><input type="submit" value="go" />
-                    </form>
-                    <h3>Follow Us:</h3>
-                    <ul>
-                        <li><a href="/Home/Store"><img src="~/Images/twitter.png" title="twitter" />Twitter</a></li>
-                        <li><a href="/Home/Store"><img src="~/Images/facebook.png" title="Facebook" />Facebook</a></li>
-                        <li><a href="/Home/Store"><img src="~/Images/rss.png" title="Rss" />Rss</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="clear"> </div>
-        <div class="wrap">
-            <div class="copy-right">
-                <p>&copy; 2016  Online Mobile Store. All Rights Reserved Online Mobile Store</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-
-

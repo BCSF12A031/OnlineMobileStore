@@ -1,273 +1,203 @@
-﻿<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Online Mobile Store</title>
-    <link href="~/Contents/stylee.css" rel="stylesheet" type="text/css" media="all" />
-    <meta name="keywords" content="Online Mobile Store" />
-    <link href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="~/Contents/responsiveslides.css">
-    <script src="~/Scripts/jquery.min.js"></script>
-    <script src="~/Scripts/responsiveslides.min.js"></script>
-    <script>
-		    // You can also use "$(window).load(function() {"
-			    $(function () {
+﻿@{
+        ViewBag.title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
 
-			      // Slideshow 1
-			      $("#slider1").responsiveSlides({
-			        maxwidth: 1600,
-			        speed: 600
-			      });
-			});
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-    <div class="wrap">
-        <!----start-Header---->
-        <div class="header">
-            <div class="search-bar">
-                <form>
-                    <input type="text"><input type="submit" value="Search" />
-                </form>
-            </div>
-            <div class="clear"> </div>
-            <div class="header-top-nav">
-                <ul>
-                    <li><a href="/Home/Register">Register</a></li>
-                    <li><a href="/Home/Register">Login</a></li>
-                    <li><a href="/Home/Store">Delivery</a></li>
-                    <li><a href="/Home/Store">Checkout</a></li>
-                    <li><a href="/Home/Store">My account</a></li>
-                    <li><a href="/Home/Store"><span>shopping cart&nbsp;&nbsp;: </span></a><label> &nbsp;noitems</label></li>
-                </ul>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
-    <div class="clear"> </div>
-    <div class="top-header">
-        <div class="wrap">
-            <!----start-logo---->
-            <div class="logo">
-                <a href="/Home/Index"><img src="~/Images/logo.png" title="logo" /></a>
-            </div>
-            <!----end-logo---->
-            <!----start-top-nav---->
-            <div class="top-nav">
-                <ul>
-                    <li><a href="/Home/Index">Home</a></li>
-                    <li><a href="/Home/About">About</a></li>
-                    <li><a href="/Home/Store">Store</a></li>
-                    <li><a href="/Home/Store">Featured</a></li>
-                    <li><a href="/Home/Blog">Blog</a></li>
-                    <li><a href="/Home/Contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
-    <!----End-top-nav---->
-    <!----End-Header---->
-    <!--start-image-slider---->
-    <div class="wrap">
-        <div class="image-slider">
-            <!-- Slideshow 1 -->
-            <ul class="rslides" id="slider1">
-                <li><img src="~/Images/1.png" alt=""></li>
-                <li><img src="~/Images/2.png" alt=""></li>
-                <li><img src="~/Images/1.png" alt=""></li>
-            </ul>
-            <!-- Slideshow 2 -->
-        </div>
-        <!--End-image-slider---->
-    </div>
-    <div class="clear"> </div>
-    <div class="wrap">
-        <div class="content">
-            <div class="top-3-grids">
-                <div class="section group">
-                    <div class="grid_1_of_3 images_1_of_3">
-                        <a href="/Home/Single"><img src="~/Images/grid-img1.jpg"></a>
-                        <h3>BlackBerry</h3>
-                    </div>
-                    <div class="grid_1_of_3 images_1_of_3 second">
-                        <a href="/Home/Single"><img src="~/Images/grid-img2.jpg"></a>
-                        <h3>Lorem Ipsum is simply dummy text </h3>
-                    </div>
-                    <div class="grid_1_of_3 images_1_of_3 theree">
-                        <a href="/Home/Single"><img src="~/Images/grid-img3.jpg"></a>
-                        <h3>Lorem Ipsum is simply dummy text </h3>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 carosal">
+            <div class="carousel slide" id="banner" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="1" data-target="#banner">
+                    </li>
+                    <li data-slide-to="2" data-target="#banner">
+                    </li>
+                    <li data-slide-to="3" data-target="#banner">
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="Carousel Bootstrap First" src="~/Images/1.png" />
 
-            <div class="content-grids">
-                <h4>Deals of the day</h4>
-                <div class="section group">
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m1.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$260</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
                     </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m2.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$150</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
+                    <div class="item">
+                        <img alt="Carousel Bootstrap Second" src="~/Images/2.png" />
+                        
                     </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m7.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$130</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
+                    <div class="item">
+                        <img alt="Carousel Bootstrap Third" src="~/Images/1.png" />
+                        
                     </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m4.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$460</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="section group">
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m2.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$260</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m6.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$100</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m7.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$180</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4 products-info">
-                        <img src="~/Images/m1.jpg">
-                        <a href="/Home/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
-                        <h3>$140</h3>
-                        <ul>
-                            <li><a class="cart" href="/Home/Single"> </a></li>
-                            <li><a class="i" href="/Home/Single"> </a></li>
-                            <li><a class="Compar" href="/Home/Single"> </a></li>
-                            <li><a class="Wishlist" href="/Home/Single"> </a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="content-sidebar">
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="/Home/Store">Accord Mobiles</a></li>
-                    <li><a href="/Home/Store">Ace Mobile</a></li>
-                    <li><a href="/Home/Store">Acer Mobile</a></li>
-                    <li><a href="/Home/Store">Airfone</a></li>
-                    <li><a href="/Home/Store">Apple</a></li>
-                    <li><a href="/Home/Store">Blackberry</a></li>
-                    <li><a href="/Home/Store">Byond Tech</a></li>
-                    <li><a href="/Home/Store">Celkon Mobiles</a></li>
-                    <li><a href="/Home/Store">Dell Mobile Phones </a></li>
-                    <li><a href="/Home/Store">Fly Mobile</a></li>
-                    <li><a href="/Home/Store">Fujezone Mobiles </a></li>
-                    <li><a href="/Home/Store">HTC</a></li>
-                    <li><a href="/Home/Store">LG Mobiles</a></li>
-                    <li><a href="/Home/Store">Longtel Mobile</a></li>
-                    <li><a href="/Home/Store">Maxx</a></li>
-                    <li><a href="/Home/Store">Micromax Mobiles </a></li>
-                    <li><a href="/Home/Store">Samsung Mobiles</a></li>
-                    <li><a href="/Home/Store">Sony Ericsson Mobiles</a></li>
-                    <li><a href="/Home/Store">Wynncom Mobiles</a></li>
-                </ul>
+                </div> <a class="left carousel-control" href="#banner" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#banner" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
-        <div class="clear"> </div>
     </div>
-    </div>
-    <div class="footer">
-        <div class="wrap">
+</div>
+
+@*<div class="wrap">
+    <div class="image-slider">
+        <!-- Slideshow 1 -->
+        <ul class="rslides" id="slider1">
+            <li><img src="~/Images/1.png" alt=""></li>
+            <li><img src="~/Images/2.png" alt=""></li>
+            <li><img src="~/Images/1.png" alt=""></li>
+        </ul>
+        <!-- Slideshow 2 -->
+        </div>
+    <!--End-image-slider---->
+</div>*@
+<div class="clear"> </div>
+<div class="wrap">
+    <div class="content">
+        <div class="top-3-grids">
             <div class="section group">
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Our Info</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="grid_1_of_3 images_1_of_3">
+                    <a href="~/Admin/Single"><img src="~/Images/grid-img1.jpg"></a>
+                    <h3>Lorem Ipsum is simply dummy text </h3>
                 </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Latest-News</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="grid_1_of_3 images_1_of_3 second">
+                    <a href="~/Admin/Single"><img src="~/Images/grid-img2.jpg"></a>
+                    <h3>Lorem Ipsum is simply dummy text </h3>
                 </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <h3>Store Location</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <h3>Order-online</h3>
-                    <p>080-1234-56789</p>
-                    <p>080-1234-56780</p>
+                <div class="grid_1_of_3 images_1_of_3 theree">
+                    <a href="~/Admin/Single"><img src="~/Images/grid-img3.jpg"></a>
+                    <h3>Lorem Ipsum is simply dummy text </h3>
                 </div>
-                <div class="col_1_of_4 span_1_of_4 footer-lastgrid">
-                    <h3>News-Letter</h3>
-                    <form>
-                        <input type="text"><input type="submit" value="go" />
-                    </form>
-                    <h3>Follow Us:</h3>
+            </div>
+        </div>
+
+        <div class="content-grids">
+            <h4>Deals of the day</h4>
+            <div class="section group">
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m1.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$260</h3>
                     <ul>
-                        <li><a href="https://www.twitter.com"><img src="~/Images/twitter.png" title="twitter" />Twitter</a></li>
-                        <li><a href="https://www.facebook.com"><img src="~/Images/facebook.png" title="Facebook" />Facebook</a></li>
-                        <li><a href="/Home/Store"><img src="~/Images/rss.png" title="Rss" />Rss</a></li>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m2.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$150</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m7.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$130</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m4.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$460</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="clear"> </div>
-        <div class="wrap">
-            <div class="copy-right">
-                <p>&copy; 2016  Online Mobile Store. All Rights Reserved Online Mobile Store</p>
+            <div class="section group">
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m2.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$260</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m6.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$100</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m7.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$180</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
+                <div class="grid_1_of_4 images_1_of_4 products-info">
+                    <img src="~/Images/m1.jpg">
+                    <a href="~/Admin/Single">Duis aute irure dolor in reprehenderit sed do eiusmod tempor incididunt</a>
+                    <h3>$140</h3>
+                    <ul>
+                        <li><a class="cart" href="~/Admin/Single"> </a></li>
+                        <li><a class="i" href="~/Admin/Single"> </a></li>
+                        <li><a class="Compar" href="~/Admin/Single"> </a></li>
+                        <li><a class="Wishlist" href="~/Admin/Single"> </a></li>
+                    </ul>
+                </div>
             </div>
+
+        </div>
+        <input type="text" placeholder="search" id="txt" name="P_Name" />
+        <input type="submit" value="Search" />
+
+    </div>
+ 
+        <div class="content-sidebar">
+            <h4>Categories</h4>
+            <ul>
+                <li>@Html.ActionLink("Accord Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Ace Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Acer Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Airphone","Store","Store")</li>
+                <li>@Html.ActionLink("Apple","Store","Store")</li>
+                <li>@Html.ActionLink("BlackBerry","Store","Store")</li>
+                <li>@Html.ActionLink("Beyond Tech","Store","Store")</li>
+                <li>@Html.ActionLink("Celkon Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Dell Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Fly Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Fujezene Mobile", "Store", "Store")</li>
+                <li>@Html.ActionLink("HTC","Store","Store")</li>
+                <li>@Html.ActionLink("LG Mobiles","Store","Store")</li>
+                <li>@Html.ActionLink("Long Tell","Store","Store")</li>
+                <li>@Html.ActionLink("Maxx","Store","Store")</li>
+                <li>@Html.ActionLink("Micromax","Store","Store")</li>
+                <li>@Html.ActionLink("Samsung","Store","Store")</li>
+                <li>@Html.ActionLink("Sony","Store","Store")</li>
+                <li>@Html.ActionLink("Wynncom Mobiles","Store","Store")</li>
+            </ul>
         </div>
     </div>
-</body>
-</html>
+    <div class="clear"> </div>
+</div>
+<script>
+
+    $('.carousal').carousel();
 
 
+    </script>

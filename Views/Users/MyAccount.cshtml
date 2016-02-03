@@ -1,0 +1,280 @@
+﻿@{
+    ViewBag.Title = "My Account";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xs-4 acc">
+            <h3><span class="glyphicon glyphicon-th"></span> My Account</h3>
+            <hr />
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-4 col-xs-4">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="vtabs">
+                <li><a href="#account" data-toggle="tab" class="active"><span class="glyphicon glyphicon-home"></span>  Account Setting Panel </a></li>
+                <li><a href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>  Personal Information</a></li>
+                <li><a href="#address" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span>  Address Book</a></li>
+                <li><a href="#order" data-toggle="tab"><span class="glyphicon glyphicon-shopping-cart"></span>  My Order</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-8 col-xs-8 tabmar">
+
+            <!-- vTab panes -->
+            <div class="tab-content">
+                <div id="account" class="tab-pane active">
+                    <div class="acc "><h4><span class="glyphicon glyphicon-home"></span> <b> Account Setting Panel</b></h4></div><hr />
+                    <div>
+                        <div class="container col-md-12" readonly style="color:#b07373;">
+                            <p readonly style="font-size:11px;">
+                                <b> Hello Hassnain</b><!-- Here the user name --><br />
+                                From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select link below to view or edit information.
+                            </p><br />
+                            <div class="row">
+                                <h4 readonly style="color:#808080;">
+                                    Edit Profile
+
+                                </h4>
+                                <hr />
+                                <div class="col-md-6" readonly style="border:1px solid #e9b9b9;border-radius:2px; padding:5px;">
+                                    <b> Contact Details</b><hr />
+                                    <p>
+                                        Hassnain Ali  <!--User Name Here--> <br />
+                                        henrypu@yahoo.com <!--User Email Here--> <i><a href="#profile" data-toggle="tab" readonly style="text-decoration:none;"> Change Email</a></i><br />
+                                    </p>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <h4 readonly style="color:#808080;">
+                                    Edit Address
+
+                                </h4>
+                                <hr />
+                                <div class="col-md-5" readonly style="border:1px solid #e9b9b9;border-radius:2px; padding:5px;">
+                                    <b> Default Address Details</b><hr />
+                                    <p>
+                                        Hassnain Ali  <!--Default Address--> <br />
+                                        <i><a href="#address" data-toggle="tab" readonly style="text-decoration:none;"> Change Default Address</a></i><br />
+                                    </p>
+                                </div>
+                                <div class="col-md-5" readonly style="border:1px solid #e9b9b9;border-radius:2px; padding:5px; margin-left:10px;">
+                                    <b>Billing Address Details</b><hr />
+                                    <p>
+                                        Hassnain Ali  <!--Billing Address Here--> <br />
+                                        <i><a href="#address" data-toggle="tab" readonly style="text-decoration:none;"> Change Billing Address</a></i><br />
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="profile">
+                    <div class="acc"><h4><span class="glyphicon glyphicon-user"></span>  Edit Account</h4></div><hr />
+
+                    <div readonly style="margin-top:40px;" class="container">
+                        <form role="form" method="post" data-toggle="validator">
+
+                            <!-- first Name input-->
+                            <div class="form-group row">
+                                <label class="col-md-2 control-label" for="fname">First Name:</label>
+                                <div class="col-md-5">
+                                    <input id="fname" name="fname" type="text" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Last Name input-->
+                            <div class="form-group row">
+                                <label class="col-md-2 control-label" for="lname">Last Name:</label>
+                                <div class="col-md-5">
+                                    <input id="lname" name="lname" type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <!-- Gender input-->
+                            <div class="form-group row">
+                                <label class="col-md-2 control-label" for="Gender">Gender:</label>
+                                <div class="col-md-3">
+                                    <select id="Gender" name="gender" class="form-control" required>
+                                        <option selected>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label class="col-md-3 control-label">Current Email:</label>
+                                <div class="col-md-3 pull-left">
+                                    <!--Current Email here-->
+                                    Henrypu@yahoo.com
+
+
+                                </div>
+                            </div>
+                            <!-- Email input-->
+                            <div class="form-group row">
+                                <label class="col-md-2 control-label" for="nemail">New Email:</label>
+                                <div class="col-md-5">
+                                    <input id="nemail" name="nemail" type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <!-- birthday input-->
+
+                            <div class="form-group row">
+                                <label class="col-md-2 control-label" for="bday">Birthday:</label>
+                                <div class="col-md-5">
+                                    <input type="text" id="datepicker" class="form-control" required>
+                                </div>
+                                <script>
+                                    $(function () {
+                                        $("#datepicker").datepicker();
+                                    });</script>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <div class="col-md-offset-6">
+                                    <button type="submit" class="btn btn-primary text-right"><span class="glyphicon glyphicon-floppy-save"></span>  Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="address">
+                    <div class="acc">
+                        <h4><span class="glyphicon glyphicon-envelope"></span> Address Book</h4>
+                    </div>
+                    <form role="form" method="post" data-toggle="validator">
+                        <a id="model-address" href="#modal-address" role="button" class="btn btn-primary addressbtn" data-toggle="modal">Add New Address</a>
+
+                        <div class="modal fade" id="modal-address" role="dialog" aria-labelledby="Add-Address" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            ×
+                                        </button>
+                                        <h4 class="modal-title" id="Add-Address">
+                                            Edit Address
+
+                                        </h4>
+                                      
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div readonly style="margin-top:40px;">
+
+
+                                            <!-- first Name input-->
+                                            <div class="form-group row">
+                                                <label class="col-md-2 control-label" for="daddress"> Default Address:</label>
+                                                <div class="col-md-9">
+                                                    <input id="daddress" name="daddress" type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+
+                                            <!-- Last Name input-->
+                                            <div class="form-group row">
+                                                <label class="col-md-2 control-label" for="baddress">Billing Address:</label>
+                                                <div class="col-md-9">
+                                                    <input id="baddress" name="baddress" type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close
+                                            </button>
+
+                                            <a href="#account" data-toggle="tab" class="btn btn-primary" data-dismiss="modal">Save Changes</a>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    <hr />
+
+                    <div class="container">
+                        <div class="row">
+                            <h4 readonly style="color:#808080;">
+                                Edit Address
+
+                            </h4>
+                            <hr />
+                            <div class="col-md-5" readonly style="border:1px solid #e9b9b9;border-radius:2px; padding:5px;">
+                                <b> Default Address Details</b><hr />
+                                <p>
+                                    No Address available  <!--Default Address--> <br />
+                                    <i> <a href="#modal-address" #id="model-address" role="button" data-toggle="modal" readonly style="text-decoration:none;"> Change Default Address</a></i><br />
+                                </p>
+                            </div>
+                            <div class="col-md-5" readonly style="border:1px solid #e9b9b9;border-radius:2px; padding:5px; margin-left:10px;">
+                                <b>Billing Address Details</b><hr />
+                                <p>
+                                    No Address Available  <!--Billing Address Here--> <br />
+                                    <i><a href="#modal-address"#id="model-address" role="button" data-toggle="modal" readonly style="text-decoration:none;"> Change Billing Address</a></i><br />
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="tab-pane" id="order">
+                    <div class="acc"><h4><span class="glyphicon glyphicon-shopping-cart"></span>  My Order</h4></div><hr />
+                    <div>
+                        <h4>You have not placed any order yet!</h4>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Online_Mobile_Store.Models.Product>
+
+@{
+    ViewBag.Title = "AdminPanel";
+    Layout = "~/Views/Shared/_LayoutPageRegister.cshtml";
+}
+
+<h2>AdminPanel</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Create New", "Create" ,null, new  { @class="btn btn-default"})
+    @Html.ActionLink("Oreder Panel", "OrederPanel", null, new { @class = "btn btn-default" })
+</p>
+
+  
+
+<div class="container">
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Serial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P_Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.p_Image)
+            </th>
+
+          <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Serial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Company)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_Brand)
+                </td>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.p_Image)
+                </th>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
